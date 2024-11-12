@@ -68,3 +68,9 @@ The model used in this project is a machine learning classifier trained to predi
 
 - **Live App**: [Healthcare Prediction Project on Streamlit](https://healthcare-prediction-project.streamlit.app/)
 - **GitHub Repository**: [GitHub - Healthcare Prediction Project](https://github.com/yourusername/healthcare-prediction-project)
+
+## 👤 Author
+
+**Chris Chalfoun**
+
+- [LinkedIn Profile](https://www.linkedin.com/in/chris-chalfoun/)
