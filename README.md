@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/healthcare-prediction-project.git
+   git clone https://github.com/Pointfit/healthcare-prediction-project.git
    cd healthcare-prediction-project
 
 2. **Set up a virtual environment**:
