@@ -38,23 +38,24 @@ elif options == "Data Exploration":
     
     # Scatter Plot - Age vs. Cholesterol Levels
     st.subheader("Age vs. Cholesterol Levels")
-    fig = px.scatter(heart_data, x="age", y="cholesterol", color="outcome", 
+    fig = px.scatter(heart_data, x="Age", y="Cholesterol", color="HeartDisease", 
                      title="Age vs. Cholesterol Levels by Outcome")
     st.plotly_chart(fig)
 
     # Histogram - Distribution of Age
     st.subheader("Age Distribution")
-    fig = px.histogram(heart_data, x="age", nbins=30, title="Distribution of Age")
+    fig = px.histogram(heart_data, x="Age", nbins=30, title="Distribution of Age")
     st.plotly_chart(fig)
 
     # Box Plot - Cholesterol Levels by Outcome
     st.subheader("Cholesterol Levels by Outcome")
-    fig = px.box(heart_data, x="outcome", y="cholesterol", title="Cholesterol Levels by Outcome")
+    fig = px.box(heart_data, x="HeartDisease", y="Cholesterol", title="Cholesterol Levels by Outcome")
     st.plotly_chart(fig)
 
     # Correlation Heatmap
     st.subheader("Correlation Heatmap")
-    corr = heart_data.corr()
+    numeric_data = heart_data.select_dtypes(include=[np.number])  # Select only numeric columns
+    corr = numeric_data.corr()  # Calculate correlation on numeric data only
     fig, ax = plt.subplots(figsize=(10, 8))
     sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm", ax=ax)
     st.pyplot(fig)
