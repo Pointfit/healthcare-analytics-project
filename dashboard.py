@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, roc_curve, auc
 import numpy as np
+import seaborn as sns
 
 # Load your data
 heart_data = pd.read_csv('heart.csv')  # Ensure 'heart.csv' is in the same directory or update the path
@@ -23,11 +24,40 @@ if options == "Project Overview":
 # Data Exploration Section
 elif options == "Data Exploration":
     st.header("Data Exploration")
+    
+    # Display a sample of the data
     st.write("**Sample of the Data**")
     st.dataframe(heart_data.head())
+    
+    # Display data types and check for missing values
     st.write("**Data Types and Missing Values Check**")
     st.write(heart_data.dtypes)
     st.write(f"No missing values: {heart_data.isnull().sum().sum() == 0}")
+    
+    # Enhanced Data Visualizations
+    
+    # Scatter Plot - Age vs. Cholesterol Levels
+    st.subheader("Age vs. Cholesterol Levels")
+    fig = px.scatter(heart_data, x="age", y="cholesterol", color="outcome", 
+                     title="Age vs. Cholesterol Levels by Outcome")
+    st.plotly_chart(fig)
+
+    # Histogram - Distribution of Age
+    st.subheader("Age Distribution")
+    fig = px.histogram(heart_data, x="age", nbins=30, title="Distribution of Age")
+    st.plotly_chart(fig)
+
+    # Box Plot - Cholesterol Levels by Outcome
+    st.subheader("Cholesterol Levels by Outcome")
+    fig = px.box(heart_data, x="outcome", y="cholesterol", title="Cholesterol Levels by Outcome")
+    st.plotly_chart(fig)
+
+    # Correlation Heatmap
+    st.subheader("Correlation Heatmap")
+    corr = heart_data.corr()
+    fig, ax = plt.subplots(figsize=(10, 8))
+    sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm", ax=ax)
+    st.pyplot(fig)
 
 # Model Comparison Section
 elif options == "Model Comparison":
