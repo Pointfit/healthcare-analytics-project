@@ -58,6 +58,12 @@ To run this project locally, follow these steps:
 
 The model used in this project is a machine learning classifier trained to predict healthcare outcomes. It was trained on historical patient data, leveraging features such as demographics, health metrics, and clinical history to make predictions.
 
+## FAQ
+
+**Q: How do I know what info to put into the prediction tool?**
+
+**A: Just hover over the little question mark next to each input for more details.**
+
 ### Key Libraries Used:
 - **Streamlit**: For building the interactive web application.
 - **Pandas**: For data manipulation and analysis.
