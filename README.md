@@ -64,7 +64,7 @@ The model used in this project is a machine learning classifier trained to predi
 - **Matplotlib & Plotly**: For data visualization.
 - **Scikit-learn**: For model training and evaluation.
 
-## FAQ
+## ❓ FAQ
 
 **Q: How do I know what info to put into the prediction tool?**
    
