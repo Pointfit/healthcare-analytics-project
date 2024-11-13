@@ -1,1 +1,4 @@
 Lib/
+my_dashboard_env/
+env/
+pyvenv.cfg
