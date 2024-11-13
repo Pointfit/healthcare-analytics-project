@@ -64,6 +64,12 @@ The model used in this project is a machine learning classifier trained to predi
 - **Matplotlib & Plotly**: For data visualization.
 - **Scikit-learn**: For model training and evaluation.
 
+## ❓ FAQ
+
+**Q: How do I know what info to put into the prediction tool?**
+   
+**A: Just hover over the little question mark next to each input for more details.**
+
 ## 🔗 Links
 
 - **Live App**: [Healthcare Prediction Project on Streamlit](https://healthcare-prediction-project.streamlit.app/)
