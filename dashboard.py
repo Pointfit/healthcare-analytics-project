@@ -279,10 +279,10 @@ elif options == "Prediction Tool":
     if st.button("Predict", key="predict_button"):
         # Get probability prediction
         probability = model.predict_proba(input_data)[0][1]  # Probability for "At Risk" class
-        st.write("Prediction Probability (At Risk):", probability)
+        st.write("Prediction Probability:", probability)
         
         # Interpret based on probability threshold
-        threshold = 0.7
+        threshold = 0.5
         if probability >= threshold:
             result_text = "At Risk (Higher likelihood of heart disease)"
         else:
