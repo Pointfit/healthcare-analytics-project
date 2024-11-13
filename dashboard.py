@@ -11,10 +11,10 @@ import joblib
 st.set_page_config(page_title="Healthcare Prediction Dashboard", page_icon="🩺")
 st.experimental_set_query_params()
 
-# Load your data
+# Load data
 heart_data = pd.read_csv('heart.csv')  # Ensure 'heart.csv' is in the same directory or update the path
 
-# Load the saved model
+# Load model
 model = joblib.load('final_model.pkl')
 
 # Sidebar for navigation
