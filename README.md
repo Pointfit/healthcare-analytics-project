@@ -60,9 +60,9 @@ The model used in this project is a machine learning classifier trained to predi
 
 ## FAQ
 
-**Q: How do I know what info to put into the prediction tool?**
-
-**A: Just hover over the little question mark next to each input for more details.**
+   **Q: How do I know what info to put into the prediction tool?**
+   
+   **A: Just hover over the little question mark next to each input for more details.**
 
 ### Key Libraries Used:
 - **Streamlit**: For building the interactive web application.
