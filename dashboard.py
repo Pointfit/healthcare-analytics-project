@@ -9,6 +9,7 @@ import joblib
 
 # Set page configuration
 st.set_page_config(page_title="Healthcare Prediction Dashboard", page_icon="🩺")
+st.experimental_set_query_params()
 
 # Load your data
 heart_data = pd.read_csv('heart.csv')  # Ensure 'heart.csv' is in the same directory or update the path
